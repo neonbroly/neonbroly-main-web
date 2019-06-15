@@ -1,10 +1,22 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import Navbar from "./components/layout/Navbar";
+import Dashboard from "./components/dashboard/Dashboard";
+import AssetDetails from "./components/submit/AssetDetails";
+import SignIn from "./components/auth/SignIn";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <h1>Hello World</h1>
+      <div className="app">
+        <Navbar />
+        <Switch>
+          <Route path="/signin" component={SignIn} />
+          <Route exact path="/" component={Dashboard} />
+          <Route path="/asset/:id" component={AssetDetails} />
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 };

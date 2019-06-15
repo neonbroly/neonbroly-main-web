@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 
-class SignIn extends Component {
+class CreateRemark extends Component {
   state = {
-    email: "",
-    password: ""
+    remark: ""
   };
 
   handleChange = e => {
@@ -20,28 +19,18 @@ class SignIn extends Component {
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit} className="white">
-          <h5 className="blue-grey-text text-darken-4">Sign In</h5>
+          <h5 className="blue-grey-text text-darken-4">Review</h5>
           <div className="input-field">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
+            <label htmlFor="remark">Submit remark..</label>
+            <textarea
+              id="remark"
+              className="materialize-textarea"
               onChange={this.handleChange}
-              className="validate"
-            />
-          </div>
-          <div className="input-field">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              onChange={this.handleChange}
-              className="validate"
             />
           </div>
           <div className="input-field">
             <button className="btn red accent-3 white-text z-depth-0">
-              Log In
+              Submit
             </button>
           </div>
         </form>
@@ -50,4 +39,4 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn;
+export default CreateRemark;
