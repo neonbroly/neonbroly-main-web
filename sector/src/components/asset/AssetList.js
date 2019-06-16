@@ -2,13 +2,13 @@ import React from "react";
 
 import AssetSummary from "./AssetSummary";
 
-const AssetList = () => {
+const AssetList = ({ assets }) => {
   return (
     <div className="asset-list section">
-      <AssetSummary />
-      <AssetSummary />
-      <AssetSummary />
-      <AssetSummary />
+      {assets &&
+        assets.map(asset => {
+          return <AssetSummary asset={asset} key={asset.id} />;
+        })}
     </div>
   );
 };

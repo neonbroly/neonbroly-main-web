@@ -1,6 +1,8 @@
 import React from "react";
 
 import CreateRemark from "../remark/CreateRemark";
+import RemarkList from "../remark/RemarkList";
+import Approve from "../approve/Approve";
 
 const AssetDetails = props => {
   const id = props.match.params.id;
@@ -22,7 +24,9 @@ const AssetDetails = props => {
           <div className="grey-text">15th October, 12pm</div>
         </div>
       </div>
+      <Approve />
       <CreateRemark />
+      <RemarkList />
     </div>
   );
 };

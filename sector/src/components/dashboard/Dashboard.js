@@ -1,14 +1,18 @@
 import React, { Component } from "react";
 
-import AssetList from "../submit/AssetList";
+import AssetList from "../asset/AssetList";
+
+import { connect } from "react-redux";
 
 class Dashboard extends Component {
   render() {
+    const { assets } = this.props;
+
     return (
       <div className="dashboard container">
         <div className="row">
           <div className="col s12">
-            <AssetList />
+            <AssetList assets={assets} />
           </div>
         </div>
       </div>
@@ -16,4 +20,10 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+const mapStateToProps = state => {
+  return {
+    assets: state.asset.assets
+  };
+};
+
+export default connect(mapStateToProps)(Dashboard);

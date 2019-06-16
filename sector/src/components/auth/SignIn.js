@@ -19,7 +19,11 @@ class SignIn extends Component {
   render() {
     return (
       <div className="container">
-        <form onSubmit={this.handleSubmit} className="white">
+        <form
+          onSubmit={this.handleSubmit}
+          className="white"
+          style={{ padding: 20, marginTop: 60 }}
+        >
           <h5 className="blue-grey-text text-darken-4">Sign In</h5>
           <div className="input-field">
             <label htmlFor="email">Email</label>

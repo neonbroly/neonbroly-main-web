@@ -21,7 +21,7 @@ class CreateRemark extends Component {
         <form onSubmit={this.handleSubmit} className="white">
           <h5 className="blue-grey-text text-darken-4">Review</h5>
           <div className="input-field">
-            <label htmlFor="remark">Submit remark..</label>
+            <label htmlFor="remark">Give remark only if any..</label>
             <textarea
               id="remark"
               className="materialize-textarea"
