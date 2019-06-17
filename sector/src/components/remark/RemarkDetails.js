@@ -1,17 +1,12 @@
 import React from "react";
 
-const RemarkDetails = props => {
+const RemarkDetails = ({ remark }) => {
   return (
     <div className="container section asset-details">
       <div className="card z-depth-0">
         <div className="card-content">
           <span className="card-title">Reviews</span>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            commodi tenetur libero quia! Quae enim aspernatur cum explicabo
-            perferendis. Rem, nam at ab dolorem molestias saepe rerum non totam
-            fugit.
-          </p>
+          <p>{remark.content}</p>
         </div>
         <div className="card-action blue-grey lighten-5">
           <div className="blue-grey-text text-darken-4">Posted by Subho</div>

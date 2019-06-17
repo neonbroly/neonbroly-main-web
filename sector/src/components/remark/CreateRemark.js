@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { createRemark } from "../../store/actions/remarkActions";
 
 class CreateRemark extends Component {
   state = {
-    remark: ""
+    content: ""
   };
 
   handleChange = e => {
@@ -12,7 +14,8 @@ class CreateRemark extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
+    this.props.createRemark(this.state);
   };
 
   render() {
@@ -21,9 +24,9 @@ class CreateRemark extends Component {
         <form onSubmit={this.handleSubmit} className="white">
           <h5 className="blue-grey-text text-darken-4">Review</h5>
           <div className="input-field">
-            <label htmlFor="remark">Give remark only if any..</label>
+            <label htmlFor="content">Give remark only if any..</label>
             <textarea
-              id="remark"
+              id="content"
               className="materialize-textarea"
               onChange={this.handleChange}
             />
@@ -39,4 +42,16 @@ class CreateRemark extends Component {
   }
 }
 
-export default CreateRemark;
+const mapDispatchToProps = dispatch => {
+  return {
+    createRemark: remark => dispatch(createRemark(remark))
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(CreateRemark);
+
+// mapStateToProps is theb first parameter
+// as it's not there it's need to pass null

@@ -2,11 +2,13 @@ import React from "react";
 
 import RemarkDetails from "./RemarkDetails";
 
-const RemarkList = () => {
+const RemarkList = ({ remarks }) => {
   return (
-    <div className="asset-list section">
-      <RemarkDetails />
-      <RemarkDetails />
+    <div className="remark-list section">
+      {remarks &&
+        remarks.map(remark => {
+          return <RemarkDetails remark={remark} key={remark.id} />;
+        })}
     </div>
   );
 };
