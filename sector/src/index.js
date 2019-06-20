@@ -20,7 +20,7 @@ const store = createStore(
         getFirebase,
         getFirestore
       })
-    ),
+    ), // TypeError: Object(...) is not a function
     reactreduxFirebase(fbConfig),
     reduxFirestore(fbConfig)
   )
