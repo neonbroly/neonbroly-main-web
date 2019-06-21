@@ -15,7 +15,7 @@ export const createRemark = remark => {
         dispatch({ type: "CREATE_REMARK", remark });
       })
       .catch(err => {
-        dispatch({ type: "CRETE_REMARK_ERROR", err });
+        dispatch({ type: "CREATE_REMARK_ERROR", err });
       });
   };
 };
