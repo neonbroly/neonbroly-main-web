@@ -5,7 +5,7 @@ import ReviewCard from "./ReviewCard";
 class ReviewList extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <ReviewCard />
         <ReviewCard />
         <ReviewCard />
