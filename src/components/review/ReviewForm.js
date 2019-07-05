@@ -19,7 +19,7 @@ class ReviewForm extends Component {
             </div>
 
             <div className="my-4">
-              <button type="submit" className="btn btn-danger">
+              <button type="submit" className="btn btn-primary">
                 Submit
               </button>
             </div>
