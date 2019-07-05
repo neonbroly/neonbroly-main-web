@@ -3,11 +3,13 @@ import React, { Component } from "react";
 class ReviewForm extends Component {
   render() {
     return (
-      <div className="container mt-4">
+      <div className="container">
         <div className="row">
-          <form>
+          <form className="container">
             <div className="form-group">
-              <label htmlFor="review">Review</label>
+              <label htmlFor="review" className="h5 mb-4 font-weight-normal">
+                Review
+              </label>
               <textarea
                 id="review"
                 type="text"
@@ -16,7 +18,7 @@ class ReviewForm extends Component {
               />
             </div>
 
-            <div className="mt-4">
+            <div className="my-4">
               <button type="submit" className="btn btn-danger">
                 Submit
               </button>
