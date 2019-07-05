@@ -6,7 +6,10 @@ class AssetDetailsCard extends Component {
       <div className="container">
         <div className="row">
           <div className="border border-light shadow-sm p-3 mb-5 bg-light rounded-lg">
-            <p className="container h5 font-weight-normal">
+            <p className="container h5 mb-4 font-weight-normal">
+              Asset Details
+            </p>
+            <p className="container h6 font-weight-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
               posuere erat a ante.
             </p>
