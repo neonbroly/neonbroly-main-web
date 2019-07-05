@@ -7,7 +7,7 @@ const SignedOut = () => {
       <ul className="navbar-nav">
         <li className="nav-item">
           <NavLink className="nav-link" to="/">
-            <button class="btn btn-danger btn-sm" type="submit">
+            <button className="btn btn-danger btn-sm" type="submit">
               SignOut
             </button>
           </NavLink>
